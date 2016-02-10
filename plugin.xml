@@ -8,7 +8,7 @@
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
- <asset src="www/serviceDiscovery.js" target="js/serviceDiscovery.js"/>
+ <asset src="www/SonyCameraAPI.js" target="js/SonyCameraAPI.js"/>
 
   <js-module src="www/SonyCameraAPI.js" name="SonyCameraAPI">
     <clobbers target="SonyCameraAPI" />
