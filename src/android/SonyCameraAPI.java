@@ -57,5 +57,7 @@ public class SonyCameraAPI extends CordovaPlugin {
 
       //System.out.println(body);
     Log.d("MyOutput", "finally");
+
+    return true; // Returning false results in no method found error.
   }
 }
