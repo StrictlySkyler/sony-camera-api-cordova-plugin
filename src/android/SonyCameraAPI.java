@@ -14,20 +14,21 @@ public class SonyCameraAPI extends CordovaPlugin {
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
     System.out.println("foo");
+    Log.d("MyFoo", "FOO");
     callbackContext.success("foo");
     callbackContext.error("bar");
 
     return false;
-    String url;
-    HttpURLConnection connection;
-    String body = "";
-    String json_string = args.toString();
+    //String url;
+    //HttpURLConnection connection;
+    //String body = "";
+    //String json_string = args.toString();
 
-    Log.d("MyOutput", json_string);
+    //Log.d("MyOutput", json_string);
 
-    if (action.equals("post")) {
+    //if (action.equals("post")) {
 
-      Log.d("MyOutput", "post");
+      //Log.d("MyOutput", "post");
 
       //url = "http://10.0.0.1:10000/sony/camera";
       //connection = (HttpURLConnection) new URL(url)
@@ -43,14 +44,14 @@ public class SonyCameraAPI extends CordovaPlugin {
       //OutputStream output = connection.getOutputStream();
       //output.write(json.getBytes());
 
-    } else {
+    //} else {
 
-      Log.d("MyOutput", "get");
+      //Log.d("MyOutput", "get");
 
       //url = "http://10.0.0.1:64321/scalarwebapi_dd.xml";
       //connection = (HttpURLConnection) new URL(url)
         //.openConnection();
-    }
+    //}
 
       //BufferedReader reader = new BufferedReader(
         //new InputStreamReader(connection.getInputStream())
@@ -61,8 +62,8 @@ public class SonyCameraAPI extends CordovaPlugin {
       //}
 
       //System.out.println(body);
-    Log.d("MyOutput", "finally");
+    //Log.d("MyOutput", "finally");
 
-    return true; // Returning false results in no method found error.
+    //return true; // Returning false results in no method found error.
   }
 }
