@@ -16,11 +16,9 @@ public class SonyCameraAPI extends CordovaPlugin {
 
     try {
 
-      JSONArray foo = new JSONArray();
-      JSONObject wut = new JSONObject();
+      JSONObject foo = new JSONObject();
 
-      wut.put("foo", "foo");
-      foo.put(wut);
+      foo.put("foo", "foo");
 
       if (action.equals("foo")) {
         Log.v(TAG, "foo");
