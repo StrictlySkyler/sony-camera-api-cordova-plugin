@@ -30,11 +30,12 @@ public class SonyCameraAPI extends CordovaPlugin {
       Log.v(TAG, "bar");
       callbackContext.error(foo);
 
-      return false;
-
     } catch (JSONException e) {
       e.printStackTrace();
+
     }
+
+    return false;
     //String url;
     //HttpURLConnection connection;
     //String body = "";
