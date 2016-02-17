@@ -1,7 +1,6 @@
 package com.skyler.camera.sony;
 
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CallbackContext;
+import org.apache.cordova.*;
 
 import java.net.*;
 import java.io.*;
@@ -10,18 +9,20 @@ import android.util.Log;
 
 public class SonyCameraAPI extends CordovaPlugin {
 
+  private static final String TAG = "skyler.plugin.SonyCameraAPI";
+
   @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
     if (action.equals("foo")) {
-      Log.v("foo");
+      Log.v(TAG, "foo");
       callbackContext.success("foo");
 
       return true;
     }
 
-    Log.v("bar");
-    callbackContext.failure("bar");
+    Log.v(TAG, "bar");
+    callbackContext.error("bar");
 
     return false;
     //String url;
