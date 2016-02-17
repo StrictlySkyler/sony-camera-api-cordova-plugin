@@ -13,10 +13,15 @@ public class SonyCameraAPI extends CordovaPlugin {
   @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
-    System.out.println("foo");
-    Log.d("MyFoo", "FOO");
-    callbackContext.success("foo");
-    callbackContext.error("bar");
+    if (action.equals("foo")) {
+      Log.v("foo");
+      callbackContext.success("foo");
+
+      return true;
+    }
+
+    Log.v("bar");
+    callbackContext.failure("bar");
 
     return false;
     //String url;
