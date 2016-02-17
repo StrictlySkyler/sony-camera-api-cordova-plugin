@@ -16,7 +16,7 @@ public class SonyCameraAPI extends CordovaPlugin {
 
     try {
 
-      JSONObject foo = new JSONObject();
+      final JSONObject foo = new JSONObject();
 
       foo.put("foo", "foo");
 
@@ -26,7 +26,7 @@ public class SonyCameraAPI extends CordovaPlugin {
           @Override
           public void run() {
             Log.v(TAG, "foo");
-            callbackContext.success(foo);
+            this.getCallbackContext().success(foo);
           }
         });
 
