@@ -10,12 +10,12 @@ import android.util.Log;
 public class SonyCameraAPI extends CordovaPlugin {
 
   private static final String TAG = "skyler.plugin.SonyCameraAPI";
-  private CallbackContext callbackContext;
+  private CallbackContext context;
 
   @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
-    this.callbackContext = callbackContext;
+    context = callbackContext;
 
     try {
 
@@ -29,7 +29,7 @@ public class SonyCameraAPI extends CordovaPlugin {
           @Override
           public void run() {
             Log.v(TAG, "foo");
-            this.callbackContext.success(foo);
+            context.success(foo);
           }
         });
 
