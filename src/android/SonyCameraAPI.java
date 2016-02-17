@@ -14,9 +14,6 @@ public class SonyCameraAPI extends CordovaPlugin {
   @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
-        cordova.getThreadPool().execute(new Runnable() {
-          @Override
-          public void run() {
     try {
 
       JSONObject foo = new JSONObject();
@@ -25,8 +22,13 @@ public class SonyCameraAPI extends CordovaPlugin {
 
       if (action.equals("foo")) {
 
+        cordova.getThreadPool().execute(new Runnable() {
+          @Override
+          public void run() {
             Log.v(TAG, "foo");
             callbackContext.success(foo);
+          }
+        });
 
         return true;
       }
@@ -38,8 +40,6 @@ public class SonyCameraAPI extends CordovaPlugin {
       e.printStackTrace();
 
     }
-          }
-        });
 
     return false;
     //String url;
