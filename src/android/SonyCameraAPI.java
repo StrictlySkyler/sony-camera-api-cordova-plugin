@@ -1,4 +1,4 @@
-package com.skyler.camera.sony;
+package com.skyler.plugin;
 
 import org.apache.cordova.*;
 
